@@ -1,0 +1,18 @@
+{%if form.errors%}
+<p>YOU HAVE ERRORS IN THE FORM</p>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+<YOU CANT ACCESS THIS PAGE!>
+
+{% else %}
+<LOGIN>
+{% endif %}
+{% endif%}
+
+<form method="POST" action="{% url 'login'%}">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="LOGIN">
+</form>

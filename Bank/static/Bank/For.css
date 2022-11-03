@@ -1,0 +1,27 @@
+.one
+{
+    align-items: center;
+    
+  
+    width: 190px; margin-left :700px;
+   
+
+}
+
+body{
+    background-image: url('FoxB.jpg');
+    background-repeat: no-repeat;
+    align-items: center;
+    
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1300px 900px, 1800px 1800px;
+    padding:0px;
+    height:500px;
+    
+}
+
+.clr
+{
+    color: darkslateblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}

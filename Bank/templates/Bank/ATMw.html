@@ -1,0 +1,87 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'Bank/ATMw.css' %}">
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light navbar-light bg-warning ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'Bank/financefox.jpg' %}" alt="" width="70" height="49" class="d-inline-block align-text-top">
+        
+                  </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Bank:Home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Bank:Form' %}">New User</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'Bank:List' %}">Existing Users</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Net Banking
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'Bank:Withdraw'%}">Withdraw Money</a></li>
+                        <li><a class="dropdown-item" href="{% url 'Bank:Deposit'%}">Deposit Money</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul
+                </ul>
+              </div>
+            </div>
+          </nav>
+<br>
+
+        <div class="one container">
+          
+       <form method="POST" class="mb-3">
+        {% csrf_token %}
+
+       
+        <label> <div class='bl'>Enter your First Name</div></label> 
+        <br>
+       <input type="text" name="first_name">
+       <br>
+       <br>
+       <label><div class='bl'>Enter your Last Name </div></label>
+       <br>
+       <input type="text" name="last_name">
+       <br>
+       <br>
+       <label><div class='bl'>Enter your Account Number</div></label>
+       <br>
+       <input type="text" name="Account_Number">
+       <br>
+       <br>
+       <label><div class='bl'>Enter the Amount you want to Withdraw</div></label>
+       <br>
+       <input type="text" name="WithdrawAmount">
+        </div>
+      <div class='bny'>
+       <input type ="submit", value="SUBMIT">
+
+       </form>
+       <br>
+       <br>
+       <a href="{% url 'Bank:Home'%}"><input type ="button" class="btn btn-warning" value="Go Back to Home Page"></a>
+      </div>
+    
+    </body>
+</html>

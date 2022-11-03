@@ -1,0 +1,28 @@
+body{
+    background-image: url('Money.jpg');
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 700px 700px, 800px 800px;
+    padding:0px;
+    height:400px;
+    background-color: black;
+
+}
+
+form{
+
+    color: yellow;
+    margin-left: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+.bl
+{
+   background-color: black;
+}
+
+.bny
+{
+    margin-left: 120px;
+}

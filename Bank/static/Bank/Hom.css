@@ -1,0 +1,19 @@
+
+body{
+
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: 1500px 800px, 600px 400px;
+    padding:0px;
+    height:200px;
+}
+
+h1{
+    text-align: center;
+}
+
+img
+{
+   size: 30px;
+   size-adjust: 90px;
+}
